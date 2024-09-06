@@ -1,0 +1,636 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+* {
+    font-family: 'Nunito', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/*HOME*/
+.highlight {
+    color: #1E90FF; /* Color azul */
+    font-weight: 700; /* Negrita */
+}
+
+/* Otros estilos */
+h1 {
+    font-size: 6rem;
+    font-weight: 400; /* Peso normal para las otras palabras */
+}
+
+.typing-text {
+    font-size: 4rem;
+    font-weight: 400;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Nunito', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: white; /* Cambiado a blanco */
+    color: black;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    padding-top: 20px;
+    background-color: white;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 3rem;
+    color: #007bff; /* Cambiado a azul */
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: black; /* Cambiado a negro para mayor visibilidad en fondo blanco */
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color: #007bff; /* Cambiado a azul */
+    border-bottom: 3px solid #007bff; /* Cambiado a azul */
+}
+
+@media(max-width:995px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #007bff; /* Cambiado a azul */
+        border-bottom: 3px solid #007bff; /* Cambiado a azul */
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+    }
+
+    nav.active{
+        display: block;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #007bff; /* Cambiado a azul */
+    }
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+/* Navegación activa */
+nav a.active {
+    color: #007bff; /* Color azul */
+    border-bottom: 3px solid #007bff; /* Línea debajo del enlace activo */
+}
+
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: white; /* Cambiado a blanco */
+}
+
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span{
+    color: #007bff; /* Cambiado a azul */
+}
+
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-content p{
+    font-size: 1.6rem;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Ajusta la altura del rebote según tus necesidades */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.home-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26vw;
+    height: 26vw;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.home-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: 0.2s linear;
+    animation: bounce 3.5s infinite; /* Aplica la animación de rebote */
+}
+
+.home-img img:hover {
+    transform: scale(1.05); /* Un pequeño aumento en el tamaño al pasar el mouse */
+}
+
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #007bff; /* Cambiado a azul */
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: #007bff; /* Cambiado a azul */
+}
+
+.social-icons a:hover{
+    color: white; /* Cambiado a blanco para contraste */
+    transform: scale(1.3) translateY(-5px);
+    background-color: #007bff; /* Cambiado a azul */
+    box-shadow: 0  0 25px #007bff; /* Cambiado a azul */
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: white; /* Cambiado a blanco */
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #007bff; /* Cambiado a azul */
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #007bff; /* Cambiado a azul */
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: scale3d(1.03);
+    background-color: #007bff; /* Cambiado a azul */
+    color: white; /* Cambiado a blanco */
+    box-shadow: 0 0 25px #007bff; /* Cambiado a azul */
+}
+
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span{
+    position: relative;
+}
+
+@media (max-width: 1000px){
+    .home{
+        gap: 4rem;
+    }
+}
+
+@media(max-width:995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid #b74b4b;
+    }
+}
+
+@media (max-width: 1000px){
+    .home{
+        gap: 4rem;
+    }
+}
+
+@media(max-width:995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+/* SOBRE MÍ */
+.sobre-mi {
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #007bff;
+    border-radius: 0.75rem;
+    margin: 2rem;
+    padding: 2rem;
+    background-color: white;
+    max-width: 1200px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.hero-image {
+    width: 16rem;
+    border-radius: 0.75rem;
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+}
+
+.hero-text {
+    max-width: 700px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.highlight {
+    font-family: 'Potato', sans-serif;
+    color: #007bff;
+}
+
+.hero-description {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.hero-description span {
+    font-weight: bold;
+}
+
+/* PROYECTOS */
+.proyectos {
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.proyectos-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #007bff;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+}
+
+.proyectos-content h1 {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 3rem; /* Coincide con el tamaño en la sección de Sobre mí */
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.proyectos-content p {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 20px; /* Coincide con el tamaño en la sección de Sobre mí */
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.project-item {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección del contenido a columna */
+    gap: 1rem;
+    border: 1px solid #007bff;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: center; /* Centra el contenido horizontalmente */
+}
+
+
+.project-image {
+    padding-top: 20px;
+    width: 70%; /* Ajusta el ancho al 80% del contenedor para hacerlo más pequeño */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    object-fit: cover; /* Ajusta la imagen para que cubra el área sin distorsionarse */
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    margin: 0 auto; /* Centra la imagen dentro del contenedor */
+}
+
+.project-info {
+    padding: 1rem;
+}
+
+.project-title {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.5rem; /* Ajusta el tamaño para que se alinee con el diseño general */
+    font-weight: bold;
+}
+
+.project-description {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1rem; /* Ajusta el tamaño a 1rem para que coincida con la sección de Sobre mí */
+    line-height: 1.6;
+    margin-top: 0.5rem;
+}
+
+/*HABILIDADES*/
+.habilidades {
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.habilidades-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #007bff;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+}
+
+.habilidades-content h1 {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 3rem; /* Coincide con el tamaño en la sección de Sobre mí */
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.habilidades-content p {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 20px; /* Coincide con el tamaño en la sección de Sobre mí */
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.habilidades-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.habilidades-lista {
+    list-style-type: none; /* Elimina las viñetas de la lista */
+    padding: 0;
+    display: flex; /* Hace la lista horizontal */
+    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea si es necesario */
+    justify-content: center; /* Centra las habilidades */
+    gap: 2rem; /* Espacio entre habilidades */
+    margin-top: 2rem; /* Espacio entre el texto descriptivo y la lista de habilidades */
+}
+
+.habilidades-lista li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.6rem;
+    padding: 1rem;
+    border: 1px solid #ddd; /* Borde alrededor de cada habilidad */
+    border-radius: 0.75rem;
+    width: 12rem; /* Tamaño fijo para cada habilidad */
+    text-align: center;
+    background-color: #fff; /* Fondo blanco */
+    transition: transform 0.3s ease;
+}
+
+.habilidades-lista li:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+}
+
+.habilidades-lista li i {
+    font-size: 3rem; /* Tamaño del ícono */
+    color: #007bff; /* Color del ícono */
+    margin-bottom: 1rem; /* Espacio entre el ícono y el texto */
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-description {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.experiencia {
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.experiencia-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #007bff;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+}
+
+.experiencia-content h1 {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.experiencia-content p {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 20px;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.experiencia-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.experiencia-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px solid #007bff;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    padding: 1rem;
+}
+
+.experiencia-item h2 {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 3rem; 
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.experiencia-item h3 {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 2rem; 
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.experiencia-item p {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 20px; 
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.empresa {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.puesto {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.2rem;
+    color: #007bff;
+    margin-bottom: 0.5rem;
+}
+
+.fecha {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 0.5rem;
+}
+
+.descripcion {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
